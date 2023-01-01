@@ -85,45 +85,28 @@ async def cc_scrape_(c, m):
 
 
 @Safone.on_message(filters.command("sk" , "."))
-
 async def sh1(message: types.Message):
-	await message.delete()
-	await message.answer_chat_action("typing")
-	user = message.text[len('/sk '):]
-	fg = user[0:10]
-	kg = user[-6:]
-	password = ""
-	try:
-		url1 = 'https://api.stripe.com/v1/balance'
-		re = requests.get(url1, auth=(user, password))
-		res = re.text
-		jee = re.json()
-		blnc = jee["pending"]
-		for blc in blnc:
-		      amt = blc["amount"]
-		      curr = blc["currency"]
-		      if "true" in res:
-		      	
-		      	await message.answer(f""" 
+  await message.delete()
+  await message.answer_chat_action("typing")
+  user = message.text[len('/sk '):]
+  data = 'card[number]=4512238502012742&card[exp_month]=12&card[exp_year]=2022&card[cvc]=354'
+  first = requests.post('https://api.stripe.com/v1/tokens', data = data, auth = (user, ' '))
+  status = first.status_code
+  if status == 200:
+      r_text = 'VALID API KEY ✅'
+  else:
+      if 'error' in first.json():
+          if 'code' in first.json()['error']:
+              r_res = first.json()['error']['code'].replace('_',' ').strip()
+          else:
+              r_res = 'INVALID API KEY'
+      else:
+          r_res = 'INVALID API KEY'
+          
+      r_text = '❌'+ r_res
+  await message.answer(f""" 
+{r_text} - <code>{user}</code>
 
-  ✅ <b> LIVE KEY </b>: <code>{user}</code>
-   𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗲:
-   	Succeeded ✅
-   	𝗕𝗮𝗹𝗮𝗻𝗰𝗲:
-   		{amt}
-   	𝗖𝘂𝗿𝗿𝗲𝗻𝗰𝘆:
-   		{curr}
-   		<b>Checked by</b> -» <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a><b>Bot by </b> -» <a href="tg://user?id=5718648078"><b>Mobius_Die</b></a>
-   		""")
-else:
-await message.answer(f"""
-   Status: DEAD KEY🚫 
-   Sk key:{user}
-   Reason: dead key
-           """)
-except:
-await message.answer(f"""
-    Status: DEAD KEY🚫 
-    Sk key: {user}
-    Reason: dead key
-            """)
+<b>Checked by</b> -» <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+<b>Bot by </b> -» <a href="tg://user?id=5718648078"><b>Mobius Die</b></a>
+          """)
