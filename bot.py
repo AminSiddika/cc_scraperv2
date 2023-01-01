@@ -165,15 +165,13 @@ async def sh1(message: types.Message):
    		<b>Checked by</b> -» <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a><b>Bot by </b> -» <a href="tg://user?id=5718648078"><b>Mobius_Die</b></a>
    		""")
    		else:
-
-        await message.answer(f"""
+await message.answer(f"""
     Status: DEAD KEY🚫 
     Sk key:{user}
     Reason: dead key
             """)
-
-    except:
-      await message.answer(f"""
+except:
+await message.answer(f"""
     Status: DEAD KEY🚫 
     Sk key: {user}
     Reason: dead key
