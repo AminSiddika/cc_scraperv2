@@ -1,0 +1,5 @@
+tgcrypto
+safoneapi
+pyrogram==1.4.16
+aiogram
+requests
