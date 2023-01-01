@@ -84,7 +84,7 @@ async def cc_scrape_(c, m):
 
 
 
-    @Safone.on_message(filters.command("sk" , "."))
+@Safone.on_message(filters.command("sk" , "."))
 
 async def sh1(message: types.Message):
 	await message.delete()
