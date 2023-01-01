@@ -12,7 +12,7 @@ Safone = Client(
 api = SafoneAPI()
 
 
- @Safone.on_message(filters.command("sk" , "."))
+@Safone.on_message(filters.command("sk" , "."))
 # async def sh1(message: types.Message):
 #   await message.delete()
 #   await message.answer_chat_action("typing")
@@ -97,7 +97,7 @@ async def cc_scrape_(c, m):
 Safone.run()
 
 
-# Safone.on_message(filters.command("gen", "."))
+Safone.on_message(filters.command("gen", "."))
 # async def igfgnfokc(message: types.Message):
 
 #   m = await message.answer("generating......")
