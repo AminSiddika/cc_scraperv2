@@ -22,7 +22,7 @@ Safone = Client(
 
 api = SafoneAPI
 
-@Safone.on_message(filters.command("ccscrape", "."))
+@Safone.on_message(filters.command("scr", "."))
 
 async def cc_scrape_(c, m):
 
