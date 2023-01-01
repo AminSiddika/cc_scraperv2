@@ -5,7 +5,7 @@ from aiogram import *
 from pyrogram import Client, filters
 
 Safone = Client(
-    os.getenv("SESSION_STRING", "BQDM7AgAhZB3zCRMUToEiXaQ8U77OhEYxOF68br0UUTohK6mlU2eG5Cgl3Evn0JKUy6_0EHyq3S8UDqRvprZGBRiOGOLe-vXjaYWnB06AuIatigtCOK7ds_Kcn1pohxkSzRG6TJ63q3OzEbHNO0pegPpXHEq7BjreT7MDUCD5Z2_Fo-FZPdjOFU35ot0YPyDKVEwC4lU-Rf4s3xckUAI6QUvQqvzJyNr-T1grd1GmdrnnnFxLVfeW2JtXVND6v-35Dzhb5lcOtD2zDv06hoPll6mIKVKaEZG4iNm5wDxakB6OvBSOcQIC0Y5C3zzfLOCMCh-8_U-lPinUMJBQlt31UPR79_L_QAAAAFNT7WpAA"),
+    os.getenv("SESSION_STRING", "BQDF7U_bFIucikZpkyzEeYE3pkgTGx9BxLeg4HJ_oSfpSMYnCmtdYcSbdeSrNqbI_I7uXDCCguHazJgjyzBxV6mTL29pydYwENcpYPq03dz3xpuy4gMWvi73GOgaOsMsqS2L6EavFl8rsxsfbCJ9Ds5Ww0gL90Vy6vrn5IaPACd9uqN96lcMD4EzdnYjXTeDclBdVpAfsUDo2V50Tm1C8SPOJ3j9K3FnFb9OOFcYBQvAtOadmNt0g_eBGCXFYJxnn_ST1Fap5Riok0Z_CFa7342ODAae7RKvrx-hND8u2KxpjSBqvMwD51gllVhtE8msffVu_s2dIuj-aBSMDRjzbsjzAAAAAU1PtakA"),
     api_id=os.getenv("API_ID", "13429768"),
     api_hash=os.getenv("API_HASH", "63b6d07b85e038eae4183c2902c4347b"),
 )
